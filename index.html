@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerarador de Declaração de Residência</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 20px;
+			color: black;
+			background-color: grey;
+			justify-content: center;
+		}
+		.main {
+			width: 800px;
+			height: 100vh;
+			align-items: center;
+			justify-content: center;
+		}		
+		.main input {
+			width: 100%;
+			height: 30px;
+			border: none;
+			border-radius: 10px;
+		}		
+		.main input[type="button"] {
+			background-color: lightblue;
+			border: none;
+			text-decoration: none;
+			padding: 10px 10px 30px 10px;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		.main input[type="button"]:hover {
+			background-color: dodgerblue;
+			color: lightblue;
+		}
+		
+		#dadosCadastrados {
+			display: flex;
+			height: auto;
+			width: 700px;
+			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			font-size: 20px;			
+		}
+		#dadosCadastrados h2 {
+			font-size: 25px;
+		}
+		#dadosCadastrados span {
+			text-transform: uppercase;
+		}
+		.footer {
+			padding: 250px 0 0 0;
+			font-size: 18px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main" id="main">
+		<h1 style="text-align:center;">Gerarador de Declaração Residencial</h1><br>
+		<form id="form">
+			<label for="nome">Nome Completo:</label>
+			<input type="text" id="nome" required><br><br>
+			
+			<label for="cpf">CPF:</label>
+			<input type="number" id="cpf" required><br><br>
+
+			<label for="endereco">Endereço:</label>
+			<input type="text" id="endereco" required><br><br>
+			
+			<label for="numero">Número:</label>
+			<input type="number" id="numero" required><br><br>
+			
+			<label for="bairro">Bairro:</label>
+			<input type="text" id="bairro" required><br><br>
+
+			<input type="button" value="GERAR" onclick="exibirDados()">
+		</form>
+	</div>
+	
+	<div id="dadosCadastrados" style="display: none;">
+		<img src="logo.png" id="logo" width="500px"/><br><br>
+		<h2>DECLARAÇÃO DE RESIDÊNCIA</h2><br /><br />
+		<p>Eu, <span id="nomeCadastrado"></span>, portador do CPF: <span id="cpfCadastrado"></span> declaro para os devidos fins de comprovação de residência, sob as penas da Lei,
+que resido no seguinte endereço: <span id="enderecoCadastrado"></span>, <span id="numeroCadastrado"></span> - <span id="bairroCadastrado"></span> - Ponta Grossa/PR.</p>
+		
+		<div class="footer">
+			<p>DATA:____/____/______&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSINATURA:_________________________________</p>
+		</div>
+	</div>	
+	
+	<script>
+        function exibirDados() {
+            var nome = document.getElementById("nome").value;
+			var cpf = document.getElementById("cpf").value;
+            var endereco = document.getElementById("endereco").value;
+            var numero = document.getElementById("numero").value;
+            var bairro = document.getElementById("bairro").value;
+            
+            // Exibe os dados na página
+            document.getElementById("nomeCadastrado").textContent = nome;
+			document.getElementById("cpfCadastrado").textContent = cpf;
+            document.getElementById("enderecoCadastrado").textContent = endereco;
+            document.getElementById("numeroCadastrado").textContent = numero;
+            document.getElementById("bairroCadastrado").textContent = bairro;
+            
+            
+            // Mostra a seção de dados cadastrados
+            document.getElementById("dadosCadastrados").style.display = "flex";
+			document.getElementById("main").style.display = "none";
+			
+        }
+    </script>
+</body>
+</html>
