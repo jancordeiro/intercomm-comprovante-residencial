@@ -5,6 +5,10 @@ Basta preencher os dados e clicar em GERAR! Os dados são gerados e preparados p
 
 Para gerar um novo, basta atualizar a página.
 
+### Funções
+- Valida CPF;
+- Valida se todos os campos estão preenchidos.
+
 ### Novas funções em breve
 - Botão pra gerar novo comprovante;
 - Botão para imprimir documento;
