@@ -26,8 +26,11 @@
 			
 			<label for="bairro">Bairro:</label>
 			<input type="text" id="bairro" required><br><br>
+			
+			<label for="cidade">Cidade/UF:</label>
+			<input type="text" id="cidade" required><br><br>
 
-			<input type="button" value="GERAR" onclick="exibirDados()">
+			<input type="button" value="GERAR" onclick="validarCampos()">
 		</form>
 		<p class="link">Open Source: <a href="https://github.com/jancordeiro/intercomm-comprovante-residencial" alt="Github Repository" target="_blank"><i class="fa-brands fa-github"></i></a></p>
 	</div>
@@ -36,7 +39,7 @@
 		<img src="logo-nobg.png" id="logo" width="500px"/><br><br>
 		<h2>DECLARAÇÃO DE RESIDÊNCIA</h2><br /><br />
 		<p>Eu, <span id="nomeCadastrado"></span>, portador do CPF: <span id="cpfCadastrado"></span> declaro para os devidos fins de comprovação de residência, sob as penas da Lei,
-que resido no seguinte endereço: <span id="enderecoCadastrado"></span>, <span id="numeroCadastrado"></span> - <span id="bairroCadastrado"></span> - Ponta Grossa/PR.</p>
+que resido no seguinte endereço: <span id="enderecoCadastrado"></span>, <span id="numeroCadastrado"></span> - <span id="bairroCadastrado"></span> - <span id="cidadeCadastrado"></span>.</p>
 		
 		<div class="footer">
 			<p>DATA:____/____/______&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSINATURA:_________________________________</p>
