@@ -7,4 +7,5 @@ Para gerar um novo, basta atualizar a página.
 
 ### Novas funções em breve
 - Botão pra gerar novo comprovante;
-- Botão para imprimir documento.
+- Botão para imprimir documento;
+- Responsividade para mobile.
